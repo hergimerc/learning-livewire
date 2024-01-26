@@ -19,6 +19,16 @@
         <livewire:styles />
     </head>
     <body class="antialiased">
+        <nav class="flex bg-slate-700 text-white">
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('counter')) ? 'bg-slate-800' : '' }}" href="/counter">Counter</a>
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('calculator')) ? 'bg-slate-800' : '' }}" href="/calculator">Calculator</a>
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('todo-list')) ? 'bg-slate-800' : '' }}" href="/todo-list">TodoList</a>
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('cascading-dropdown')) ? 'bg-slate-800' : '' }}" href="/cascading-dropdown">Cascading Dropdown</a>
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('products')) ? 'bg-slate-800' : '' }}" href="/products">Products Search</a>
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('image-upload')) ? 'bg-slate-800' : '' }}" href="/image-upload">Image Upload</a>
+            <a class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('register')) ? 'bg-slate-800' : '' }}" href="/register">Registration</a>
+        </nav>
+
         {{ $slot }}
 
         <livewire:scripts />
