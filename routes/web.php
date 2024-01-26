@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\{Calculator, TodoList};
+use App\Livewire\{Calculator, CascadingDropdown, TodoList};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,4 @@ Route::get('/counter', function () {
 
 Route::get('/calculator', Calculator::class)->name('calculator');
 Route::get('/todo-list', TodoList::class)->name('todo-list');
+Route::get('/cascading-dropdown', CascadingDropdown::class)->name('cascading-dropdown');
