@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\{Continent, Country};
+use App\Models\{Continent, Country, Product};
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
                 $c->countries()->saveMany(Country::factory(10)->make());
             });
         }
+
+        Product::factory(100)->create();
 
         // \App\Models\User::factory(10)->create();
 
